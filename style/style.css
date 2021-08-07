@@ -37,6 +37,11 @@ p {
     font-style: italic;
 }
 
-.table table-bordered{
-    margin: 45px;
+footer {
+    background-color: #F7BFBE;
+}
+
+footer p {
+    text-align: center;
+    color: #000000;
 }
