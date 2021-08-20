@@ -1,0 +1,123 @@
+$color-primary: #bdecb6;
+$color-secundary: white; 
+$color-negro: black;
+
+body {
+    background-color: $color-primary;
+    h1 {
+        font-family: Arial;
+        margin-left: 115px;
+    }
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 5px;
+        grid-row-gap: 0px; 
+
+        .div1 { 
+            grid-area: 1 / 1 / 2 / 2; 
+            img {
+                border-radius: 10px;
+                border: $color-secundary 5px solid;
+                width: 500px;
+                height: 350px;
+                margin-left: 115px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .div2 { 
+            grid-area: 1 / 2 / 2 / 3; 
+            h3 {
+                font-weight: normal;
+                font-size: 20px;
+                font-family: verdana;
+                text-align: justify;
+                margin-right: 115px;
+                
+            }
+        }
+    }
+
+    #texto-secundario {
+        img {
+            border: $color-secundary 5px solid;
+            height: 300px;
+            width: 350px;
+            border-radius: 10px;
+        
+        }
+    
+        p {
+            text-align: justify;
+            color: $color-negro;
+            font-family: Georgia;
+            font-style: italic;
+        }
+    }
+
+}
+
+   
+
+
+
+
+
+
+/*--------------------Footer--------------------------*/
+.footer{
+    color: #95596f;
+    font-size: 14px;
+    padding: 5px 0 5px;
+    text-align: center;
+}
+.footer h3{
+    margin-bottom: 1px;
+    padding: 0 5px;
+}
+.footer-col-1 {
+    min-width: 100px;
+    margin-bottom: 1px;
+}
+
+
+/*--------------------Sliders--------------------------*/
+.carousel-caption{
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 5%;
+}
+.carousel-caption h1 h2{
+    font-size: 50px;
+    font-weight: 100;
+    color: #fff;
+}
+.container-slide{
+    max-width: 800px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.btn0{
+    display: inline-block;
+    background-color: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+/*------------------------------------------------------*/
