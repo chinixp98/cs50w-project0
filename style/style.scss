@@ -1,43 +1,64 @@
 $color-primary: #bdecb6;
-$color-secundary: white; 
+$color-secundary: white;
 $color-negro: black;
+
+@media only screen and (max-width: 600px) {
+    body {
+        h1 {
+            color: blue;
+            font-style: italic;
+            font-size: 20px;
+        }
+    }
+}
+
+%letra {
+        font-family: Arial;
+        margin-left: 115px;
+        margin-right: 115px;
+        text-align: justify;
+}
+
+%letra2 {
+    font-size: 20px;
+    font-family: verdana;
+    text-align: justify;
+    margin-left: 115px;
+}
 
 body {
     background-color: $color-primary;
     h1 {
-        font-family: Arial;
-        margin-left: 115px;
+        @extend %letra;
+        font-weight: bolder;
     }
-    .parent {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 5px;
-        grid-row-gap: 0px; 
 
-        .div1 { 
-            grid-area: 1 / 1 / 2 / 2; 
-            img {
-                border-radius: 10px;
-                border: $color-secundary 5px solid;
-                width: 500px;
-                height: 350px;
-                margin-left: 115px;
-                margin-bottom: 30px;
-            }
+    h3 {
+        @extend %letra;
+        font-size: 25px;
+        padding-bottom: 15px;
+        margin-left: 0px;
+    }
+
+    #texto-primary {
+        img {
+            border-radius: 10px;
+            border: $color-secundary 5px solid;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            width: 550px;
+            height: 450px;
+            display: block,
         }
 
-        .div2 { 
-            grid-area: 1 / 2 / 2 / 3; 
-            h3 {
-                font-weight: normal;
-                font-size: 20px;
-                font-family: verdana;
-                text-align: justify;
-                margin-right: 115px;
-                
-            }
+        h3 {
+            @extend %letra2;
+            margin-left: 0px;
+            margin-right: 0px;
         }
+
     }
 
     #texto-secundario {
@@ -46,9 +67,9 @@ body {
             height: 300px;
             width: 350px;
             border-radius: 10px;
-        
+
         }
-    
+
         p {
             text-align: justify;
             color: $color-negro;
@@ -57,67 +78,174 @@ body {
         }
     }
 
+    #texto-raza {
+        h3 {
+            @extend %letra2;
+        }
+    }
+
+    #texto-cuidado {
+        img {
+            width: 700px;
+            height: 450px;
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            border: $color-secundary 5px solid;
+        }
+        h2 {
+            @extend %letra;
+
+        }
+        p {
+            @extend %letra;
+            font-size: 20px;
+        }
+
+    }
+
+    #texto-alimentacion {
+        h2 {
+            @extend %letra;
+
+        }
+        p {
+            @extend %letra;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            @extend %letra;
+            font-size: 20px;
+            font-style: italic;
+            li {
+                margin-bottom: 25px;
+            }
+            a {
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    #texto-ambiente {
+
+        h2 {
+            @extend %letra;
+
+        }
+        p {
+            @extend %letra;
+            font-size: 20px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        img {
+            margin-right: 0px;
+            margin-left: 0px;
+            width: 600px;
+            height: 350px;
+            border-radius: 10px;
+            border: $color-secundary 5px solid;
+        }
+
+    }
+
+    #texto-enfermedades {
+
+        h2 {
+            @extend %letra;
+
+        }
+        p {
+            @extend %letra;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        ol {
+            @extend %letra;
+            font-size: 20px;
+            font-style: italic;
+            li {
+                margin-bottom: 25px;
+            }
+            a {
+                font-weight: bold;
+            }
+        }
+
+    }
+
+    #texto-embarazo {
+
+        h2 {
+            @extend %letra;
+
+        }
+        p {
+            @extend %letra;
+            font-size: 20px;
+        }
+
+        ul {
+            @extend %letra;
+            font-size: 20px;
+            font-style: italic;
+            li {
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    #mucho-texto {
+        h3 {
+            margin-left: 115px;
+            @extend %letra2;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px;
+            border: $color-secundary 5px solid;
+        }
+
+        h5 {
+            text-align: center;
+            font-weight: bolder;
+            font-size: 45px;
+        }
+    }
+
 }
 
-   
-
-
-
-
-
-
 /*--------------------Footer--------------------------*/
-.footer{
+.footer {
     color: #95596f;
     font-size: 14px;
     padding: 5px 0 5px;
     text-align: center;
-}
-.footer h3{
+
+    h3 {
     margin-bottom: 1px;
     padding: 0 5px;
+    font-style: italic;
+    text-align: center;
 }
+    h4 {
+    text-align: right;
+    font-style: italic;
+}
+
+}
+
 .footer-col-1 {
     min-width: 100px;
     margin-bottom: 1px;
 }
-
-
-/*--------------------Sliders--------------------------*/
-.carousel-caption{
-    position: absolute;
-    top: 60%;
-    transform: translateY(-50%);
-    left: 5%;
-}
-.carousel-caption h1 h2{
-    font-size: 50px;
-    font-weight: 100;
-    color: #fff;
-}
-.container-slide{
-    max-width: 800px;
-    margin: auto;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-a{
-    text-decoration: none;
-    color: #fff;
-}
-.btn0{
-    display: inline-block;
-    background-color: #ff523b;
-    color: #fff;
-    padding: 8px 30px;
-    margin: 30px 0;
-    border-radius: 30px;
-    transition: 0.5s;
-}
-/*------------------------------------------------------*/
